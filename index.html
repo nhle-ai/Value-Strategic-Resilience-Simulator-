@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VALUE™ Strategic Resilience Simulator (VSRS) | Digital Boardroom</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        :root {
+            --bg-warm: #FDFBF7;
+            --navy-deep: #2D4059;
+            --sand-muted: #ECC19C;
+            --accent-soft: #84A9AC;
+        }
+        body {
+            background-color: var(--bg-warm);
+            color: #333;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(45, 64, 89, 0.1);
+        }
+        .agent-card {
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .agent-card.active {
+            border-color: var(--navy-deep);
+            background-color: #ffffff;
+            box-shadow: 0 10px 25px -5px rgba(45, 64, 89, 0.1);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+<nav class="sticky top-0 z-50 border-b border-gray-200 glass-card px-6 py-4">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+        <div class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-[#2D4059] rounded-lg flex items-center justify-center text-white font-bold text-lg">VSRS</div>
+            <div>
+                <h1 class="text-lg font-bold text-[#2D4059] leading-tight">VALUE™ Strategic Resilience Simulator</h1>
+                <p class="text-xs text-gray-500 uppercase tracking-tighter">AI Digital Boardroom & Trade Shock Engine</p>
+            </div>
+        </div>
+        <div class="flex flex-wrap justify-center items-center gap-3">
+            <button onclick="scrollToSection('diplomacy')" class="px-4 py-2 text-sm font-medium hover:bg-[#ECC19C]/20 rounded-full transition">Leadership Context</button>
+            <button onclick="scrollToSection('simulator')" class="px-4 py-2 text-sm font-medium hover:bg-[#ECC19C]/20 rounded-full transition">Trade Simulator</button>
+            <button onclick="scrollToSection('cascade')" class="px-4 py-2 text-sm font-medium hover:bg-[#ECC19C]/20 rounded-full transition">Enterprise Impact</button>
+            <button onclick="scrollToSection('boardroom')" class="px-4 py-2 text-sm font-medium hover:bg-[#ECC19C]/20 rounded-full transition">AI Boardroom</button>
+            <a href="report.html" target="_blank" class="px-4 py-2 text-sm font-semibold bg-[#ECC19C] text-[#2D4059] rounded-full hover:bg-amber-200 transition shadow-sm">
+                📄 Open Architecture White Paper
+            </a>
+        </div>
+    </div>
+</nav>
+
+<main class="max-w-7xl mx-auto px-4 py-12 space-y-24">
+
+    <!-- Section 1: Diplomacy, Mutual Respect & Leadership Context -->
+    <section id="diplomacy" class="max-w-4xl mx-auto bg-white p-8 md:p-12 rounded-3xl shadow-xl shadow-gray-200/40 border border-gray-100 space-y-6">
+        <span class="px-3 py-1 bg-[#2D4059]/5 text-[#2D4059] text-xs font-bold uppercase tracking-wider rounded-md">Executive Commentary</span>
+        <h2 class="text-3xl font-serif font-light text-[#2D4059] leading-tight">
+            Leadership in Times of Disruption: <span class="italic text-[#84A9AC]">Lessons from Ally Diplomacy</span>
+        </h2>
+        <p class="text-gray-600 leading-relaxed text-base">
+            In times of macro uncertainty between Canada and the United States, we are reminded that character, decency, and mutual respect sit at the foundation of all enduring partnerships. Reflecting on leaders like President Barack Obama, true leadership between allies is built on loyalty, dignity, and shared purpose—not confrontation.
+        </p>
+        <div class="p-6 bg-[#FDFBF7] rounded-2xl border-l-4 border-[#ECC19C] text-sm text-gray-700 italic font-serif">
+            "When trade networks and geopolitical landscapes face immense strain, resilient business strategies cannot rely solely on software algorithms. They require leaders equipped with humanity, strategic clarity, and disciplined reasoning."
+        </div>
+    </section>
+
+    <!-- Hero / Tagline -->
+    <section class="text-center max-w-3xl mx-auto space-y-4">
+        <span class="text-xs font-bold uppercase tracking-[0.2em] text-[#84A9AC]">Decision Support Engine</span>
+        <h2 class="text-4xl md:text-5xl font-serif font-light text-[#2D4059]">Turning Global Uncertainty into <span class="italic text-[#84A9AC]">Executive Clarity</span></h2>
+        <p class="text-gray-600 text-lg">
+            Instead of asking "What happens if tariffs increase?", VSRS asks: <strong>"How should an executive team respond to preserve profitability, resilience, and long-term enterprise value?"</strong>
+        </p>
+    </section>
+
+    <!-- Section 2: Interactive Trade Shock Simulator -->
+    <section id="simulator" class="space-y-8 bg-white/50 p-8 rounded-3xl border border-gray-100">
+        <div class="max-w-2xl">
+            <h3 class="text-3xl font-bold text-[#2D4059]">Trade Policy & Tariff Shock Controls</h3>
+            <p class="mt-2 text-gray-600 text-sm">Configure macroeconomic disruption parameters to evaluate cross-functional enterprise consequences.</p>
+        </div>
+
+        <div class="grid md:grid-cols-4 gap-6">
+            <!-- Parameter Controls -->
+            <div class="space-y-4 bg-white p-6 rounded-2xl border border-gray-100 shadow-sm">
+                <h4 class="font-bold text-[#2D4059] text-sm uppercase tracking-wider">Scenario Setup</h4>
+                
+                <div>
+                    <label class="text-xs font-semibold text-gray-500">Trade Corridor</label>
+                    <select id="simCorridor" onchange="runSimulation()" class="w-full mt-1 p-2 text-sm bg-[#FDFBF7] border border-gray-200 rounded-lg">
+                        <option value="US-CA">US ↔ Canada (Cross-Border)</option>
+                        <option value="US-CN">US ↔ China (Transpacific)</option>
+                        <option value="EU-NA">EU ↔ North America</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="text-xs font-semibold text-gray-500">Tariff Level (Steel/Electronics)</label>
+                    <input type="range" min="0" max="100" value="50" id="simTariff" oninput="runSimulation()" class="w-full accent-[#2D4059]">
+                    <div class="flex justify-between text-xs text-gray-400">
+                        <span>0%</span><span id="tariffVal" class="font-bold text-[#2D4059]">50%</span><span>100%</span>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="text-xs font-semibold text-gray-500">Time Horizon</label>
+                    <select id="simHorizon" onchange="runSimulation()" class="w-full mt-1 p-2 text-sm bg-[#FDFBF7] border border-gray-200 rounded-lg">
+                        <option value="30">30 Days (Immediate Shock)</option>
+                        <option value="90" selected>90 Days (Quarterly Adjustment)</option>
+                        <option value="365">1 Year (Strategic Re-alignment)</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Real-Time Metrics -->
+            <div class="md:col-span-3 glass-card p-6 rounded-2xl space-y-6">
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="p-4 bg-white rounded-xl border border-gray-100">
+                        <span class="text-[10px] font-bold text-[#84A9AC] uppercase">Gross Margin Impact</span>
+                        <p id="metricMargin" class="text-2xl font-bold text-rose-600">-14.2%</p>
+                    </div>
+                    <div class="p-4 bg-white rounded-xl border border-gray-100">
+                        <span class="text-[10px] font-bold text-[#84A9AC] uppercase">Inventory Days Coverage</span>
+                        <p id="metricInventory" class="text-2xl font-bold text-[#2D4059]">42 Days</p>
+                    </div>
+                    <div class="p-4 bg-white rounded-xl border border-gray-100">
+                        <span class="text-[10px] font-bold text-[#84A9AC] uppercase">Supplier Risk Index</span>
+                        <p id="metricRisk" class="text-2xl font-bold text-amber-600">7.8 / 10</p>
+                    </div>
+                    <div class="p-4 bg-white rounded-xl border border-gray-100">
+                        <span class="text-[10px] font-bold text-[#84A9AC] uppercase">Resilience Score</span>
+                        <p id="metricResilience" class="text-2xl font-bold text-emerald-700">68 / 100</p>
+                    </div>
+                </div>
+
+                <!-- Simulation Graph -->
+                <div class="chart-container">
+                    <canvas id="simChart"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: The Enterprise Impact Cascade -->
+    <section id="cascade" class="space-y-8">
+        <div class="text-center max-w-2xl mx-auto space-y-2">
+            <h3 class="text-3xl font-bold text-[#2D4059]">Second & Third-Order Impact Engine</h3>
+            <p class="text-gray-600 text-sm">VSRS traces macroeconomic trade policy down to cash flow and valuation.</p>
+        </div>
+
+        <div class="grid md:grid-cols-5 gap-3 text-center text-xs">
+            <div class="p-4 bg-white rounded-xl border border-gray-200 shadow-sm space-y-1">
+                <span class="text-[#84A9AC] font-bold">STAGE 1</span>
+                <p class="font-bold text-[#2D4059]">Tariff Increase</p>
+                <p class="text-gray-400 text-[10px]">Import Costs & Custom Duties ↑</p>
+            </div>
+            <div class="p-4 bg-white rounded-xl border border-gray-200 shadow-sm space-y-1">
+                <span class="text-[#84A9AC] font-bold">STAGE 2</span>
+                <p class="font-bold text-[#2D4059]">SRM Sourcing</p>
+                <p class="text-gray-400 text-[10px]">Supplier Contract Adjustments</p>
+            </div>
+            <div class="p-4 bg-white rounded-xl border border-gray-200 shadow-sm space-y-1">
+                <span class="text-[#84A9AC] font-bold">STAGE 3</span>
+                <p class="font-bold text-[#2D4059]">Manufacturing</p>
+                <p class="text-gray-400 text-[10px]">Unit Cost & BOM Escalation</p>
+            </div>
+            <div class="p-4 bg-white rounded-xl border border-gray-200 shadow-sm space-y-1">
+                <span class="text-[#84A9AC] font-bold">STAGE 4</span>
+                <p class="font-bold text-[#2D4059]">Commercial Trade-off</p>
+                <p class="text-gray-400 text-[10px]">Raise Prices vs. Margin Erosion</p>
+            </div>
+            <div class="p-4 bg-white rounded-xl border border-gray-200 shadow-sm space-y-1 bg-[#ECC19C]/20">
+                <span class="text-[#2D4059] font-bold">FINAL IMPACT</span>
+                <p class="font-bold text-[#2D4059]">Enterprise Value</p>
+                <p class="text-gray-600 text-[10px]">Cash Flow & Company Valuation</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Virtual AI Boardroom -->
+    <section id="boardroom" class="py-12 px-8 bg-[#2D4059] rounded-[3rem] text-white space-y-8">
+        <div class="max-w-2xl space-y-2">
+            <span class="text-xs font-bold uppercase tracking-[0.2em] text-[#ECC19C]">Autonomous Multi-Agent Analysis</span>
+            <h3 class="text-3xl font-serif font-light">The Virtual <span class="italic text-[#ECC19C]">AI Boardroom</span></h3>
+            <p class="text-gray-300 text-sm">Compare perspectives across C-suite roles before committing capital strategy.</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+            <div onclick="setAgent('cfo')" id="agent-cfo" class="agent-card active p-6 rounded-2xl text-[#2D4059] space-y-3">
+                <span class="px-2 py-1 bg-[#2D4059] text-white text-[10px] font-bold rounded">CFO AGENT</span>
+                <h4 class="font-bold text-lg">Financial & Working Capital</h4>
+                <p class="text-xs text-gray-600">"Recommend absorbing 15% of tariff shock in Q1 to preserve volume, while renegotiating payment terms with tier-1 suppliers."</p>
+            </div>
+            <div onclick="setAgent('coo')" id="agent-coo" class="agent-card p-6 bg-white/10 rounded-2xl text-white space-y-3">
+                <span class="px-2 py-1 bg-[#ECC19C] text-[#2D4059] text-[10px] font-bold rounded">COO AGENT</span>
+                <h4 class="font-bold text-lg">Operations & Logistics</h4>
+                <p class="text-xs text-gray-300">"Shift 30% of hardline manufacturing to Canadian domestic hubs to bypass port bottleneck tariffs."</p>
+            </div>
+            <div onclick="setAgent('cpo')" id="agent-cpo" class="agent-card p-6 bg-white/10 rounded-2xl text-white space-y-3">
+                <span class="px-2 py-1 bg-[#84A9AC] text-[#2D4059] text-[10px] font-bold rounded">CPO AGENT</span>
+                <h4 class="font-bold text-lg">Procurement & SRM</h4>
+                <p class="text-xs text-gray-300">"Activate dual-sourcing MSAs in Europe for generic steel components to protect product margin."</p>
+            </div>
+        </div>
+
+        <div id="agentDetail" class="p-6 bg-white/10 rounded-2xl border border-white/10 text-sm text-gray-200">
+            <strong>Selected Perspective (CFO):</strong> Prioritizing short-term EBITDA protection while utilizing safety stock buffers to prevent price sensitivity churn.
+        </div>
+    </section>
+
+</main>
+
+<footer class="bg-white border-t border-gray-100 py-12 mt-24">
+    <div class="max-w-7xl mx-auto px-4 text-center space-y-4">
+        <p class="text-sm font-bold text-[#2D4059] uppercase tracking-widest">VALUE™ Strategic Resilience Simulator</p>
+        <p class="text-xs text-gray-400">© 2026 Enterprise Decision Intelligence Systems | Hosted via GitHub Pages</p>
+    </div>
+</footer>
+
+<script>
+    function scrollToSection(id) {
+        document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Chart.js Setup
+    const ctx = document.getElementById('simChart').getContext('2d');
+    const simChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['Week 1', 'Week 4', 'Week 8', 'Week 12'],
+            datasets: [
+                {
+                    label: 'Base Case Revenue',
+                    data: [100, 102, 105, 108],
+                    borderColor: '#84A9AC',
+                    tension: 0.3
+                },
+                {
+                    label: 'Simulated Trade Shock Margin',
+                    data: [100, 92, 84, 78],
+                    borderColor: '#2D4059',
+                    backgroundColor: 'rgba(45, 64, 89, 0.1)',
+                    fill: true,
+                    tension: 0.3
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: { legend: { position: 'top' } }
+        }
+    });
+
+    function runSimulation() {
+        const tariff = document.getElementById('simTariff').value;
+        document.getElementById('tariffVal').innerText = tariff + '%';
+
+        const marginImpact = (-0.28 * tariff).toFixed(1);
+        const riskIndex = (4 + (tariff * 0.05)).toFixed(1);
+        const resilience = Math.max(20, (100 - (tariff * 0.6))).toFixed(0);
+
+        document.getElementById('metricMargin').innerText = marginImpact + '%';
+        document.getElementById('metricRisk').innerText = riskIndex + ' / 10';
+        document.getElementById('metricResilience').innerText = resilience + ' / 100';
+
+        // Update chart simulation values dynamically
+        simChart.data.datasets[1].data = [
+            100, 
+            (100 - (tariff * 0.15)).toFixed(0), 
+            (100 - (tariff * 0.32)).toFixed(0), 
+            (100 - (tariff * 0.44)).toFixed(0)
+        ];
+        simChart.update();
+    }
+
+    function setAgent(role) {
+        ['cfo', 'coo', 'cpo'].forEach(r => {
+            const el = document.getElementById('agent-' + r);
+            el.className = "agent-card p-6 bg-white/10 rounded-2xl text-white space-y-3";
+        });
+        const active = document.getElementById('agent-' + role);
+        active.className = "agent-card active p-6 rounded-2xl text-[#2D4059] space-y-3";
+
+        const detail = document.getElementById('agentDetail');
+        if (role === 'cfo') {
+            detail.innerHTML = "<strong>Selected Perspective (CFO):</strong> Prioritizing short-term EBITDA protection while utilizing safety stock buffers to prevent price sensitivity churn.";
+        } else if (role === 'coo') {
+            detail.innerHTML = "<strong>Selected Perspective (COO):</strong> Focusing on operational throughput, rerouting logistics corridors, and maintaining plant capacity utilization.";
+        } else {
+            detail.innerHTML = "<strong>Selected Perspective (CPO):</strong> Re-evaluating supplier contract MSAs, managing PO deviations, and shifting toward dual-sourcing nearshoring hubs.";
+        }
+    }
+
+    runSimulation();
+</script>
+</body>
+</html>
