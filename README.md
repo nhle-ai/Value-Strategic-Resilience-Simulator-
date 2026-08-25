@@ -56,7 +56,7 @@ Each simulation evaluates enterprise stability across seven strategic vectors:
 ---
 
 ## Repository File Structure
-
+```text
 ├── index.html           # Interactive VSRS Digital Boardroom & Workforce Console
 ├── report.html          # Standalone Executive Architecture White Paper
 └── README.md            # Repository overview & deployment documentation
