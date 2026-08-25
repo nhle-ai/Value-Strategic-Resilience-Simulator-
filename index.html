@@ -194,122 +194,118 @@
         </div>
     </section>
 
-    <!-- Section 4: Virtual AI Boardroom -->
-    <section id="boardroom" class="py-12 px-8 bg-[#2D4059] rounded-[3rem] text-white space-y-8">
+   <!-- Section 4: Virtual AI Boardroom & Technical Workforce -->
+<section id="boardroom" class="py-12 px-8 bg-[#2D4059] rounded-[3rem] text-white space-y-8">
+    <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-4">
         <div class="max-w-2xl space-y-2">
-            <span class="text-xs font-bold uppercase tracking-[0.2em] text-[#ECC19C]">Autonomous Multi-Agent Analysis</span>
-            <h3 class="text-3xl font-serif font-light">The Virtual <span class="italic text-[#ECC19C]">AI Boardroom</span></h3>
-            <p class="text-gray-300 text-sm">Compare perspectives across C-suite roles before committing capital strategy.</p>
+            <span class="text-xs font-bold uppercase tracking-[0.2em] text-[#ECC19C]">Autonomous Multi-Agent Architecture</span>
+            <h3 class="text-3xl font-serif font-light">The AI Executive <span class="italic text-[#ECC19C]">Workforce</span></h3>
+            <p class="text-gray-300 text-sm">Real-time collaboration between enterprise strategy agents and technical governance engines.</p>
         </div>
-
-        <div class="grid md:grid-cols-3 gap-6">
-            <div onclick="setAgent('cfo')" id="agent-cfo" class="agent-card active p-6 rounded-2xl text-[#2D4059] space-y-3">
-                <span class="px-2 py-1 bg-[#2D4059] text-white text-[10px] font-bold rounded">CFO AGENT</span>
-                <h4 class="font-bold text-lg">Financial & Working Capital</h4>
-                <p class="text-xs text-gray-600">"Recommend absorbing 15% of tariff shock in Q1 to preserve volume, while renegotiating payment terms with tier-1 suppliers."</p>
-            </div>
-            <div onclick="setAgent('coo')" id="agent-coo" class="agent-card p-6 bg-white/10 rounded-2xl text-white space-y-3">
-                <span class="px-2 py-1 bg-[#ECC19C] text-[#2D4059] text-[10px] font-bold rounded">COO AGENT</span>
-                <h4 class="font-bold text-lg">Operations & Logistics</h4>
-                <p class="text-xs text-gray-300">"Shift 30% of hardline manufacturing to Canadian domestic hubs to bypass port bottleneck tariffs."</p>
-            </div>
-            <div onclick="setAgent('cpo')" id="agent-cpo" class="agent-card p-6 bg-white/10 rounded-2xl text-white space-y-3">
-                <span class="px-2 py-1 bg-[#84A9AC] text-[#2D4059] text-[10px] font-bold rounded">CPO AGENT</span>
-                <h4 class="font-bold text-lg">Procurement & SRM</h4>
-                <p class="text-xs text-gray-300">"Activate dual-sourcing MSAs in Europe for generic steel components to protect product margin."</p>
-            </div>
+        
+        <!-- Toggle Workforce View -->
+        <div class="flex gap-2 bg-white/10 p-1 rounded-full text-xs font-semibold">
+            <button onclick="switchWorkforce('ops')" id="tab-ops" class="px-4 py-2 rounded-full bg-[#ECC19C] text-[#2D4059]">Commercial & Operations</button>
+            <button onclick="switchWorkforce('tech')" id="tab-tech" class="px-4 py-2 rounded-full text-white hover:bg-white/10">AI & Governance Stack</button>
         </div>
-
-        <div id="agentDetail" class="p-6 bg-white/10 rounded-2xl border border-white/10 text-sm text-gray-200">
-            <strong>Selected Perspective (CFO):</strong> Prioritizing short-term EBITDA protection while utilizing safety stock buffers to prevent price sensitivity churn.
-        </div>
-    </section>
-
-</main>
-
-<footer class="bg-white border-t border-gray-100 py-12 mt-24">
-    <div class="max-w-7xl mx-auto px-4 text-center space-y-4">
-        <p class="text-sm font-bold text-[#2D4059] uppercase tracking-widest">VALUE™ Strategic Resilience Simulator</p>
-        <p class="text-xs text-gray-400">© 2026 Enterprise Decision Intelligence Systems | Hosted via GitHub Pages</p>
     </div>
-</footer>
 
+    <!-- Commercial & Operations Grid -->
+    <div id="grid-ops" class="grid md:grid-cols-3 gap-6">
+        <div onclick="setAgent('cfo')" id="agent-cfo" class="agent-card active p-6 rounded-2xl text-[#2D4059] space-y-3">
+            <span class="px-2 py-1 bg-[#2D4059] text-white text-[10px] font-bold rounded">CFO AGENT</span>
+            <h4 class="font-bold text-lg">Financial & Working Capital</h4>
+            <p class="text-xs text-gray-600">"Recommend absorbing 15% of tariff shock in Q1 to preserve volume, while renegotiating payment terms with tier-1 suppliers."</p>
+        </div>
+        <div onclick="setAgent('coo')" id="agent-coo" class="agent-card p-6 bg-white/10 rounded-2xl text-white space-y-3">
+            <span class="px-2 py-1 bg-[#ECC19C] text-[#2D4059] text-[10px] font-bold rounded">COO AGENT</span>
+            <h4 class="font-bold text-lg">Operations & Logistics</h4>
+            <p class="text-xs text-gray-300">"Shift 30% of hardline manufacturing to domestic hubs to bypass port bottleneck tariffs."</p>
+        </div>
+        <div onclick="setAgent('cpo')" id="agent-cpo" class="agent-card p-6 bg-white/10 rounded-2xl text-white space-y-3">
+            <span class="px-2 py-1 bg-[#84A9AC] text-[#2D4059] text-[10px] font-bold rounded">CPO AGENT</span>
+            <h4 class="font-bold text-lg">Procurement & SRM</h4>
+            <p class="text-xs text-gray-300">"Activate dual-sourcing MSAs in alternative markets for generic components to protect product margin."</p>
+        </div>
+    </div>
+
+    <!-- AI & Governance Stack Grid (Hidden by default) -->
+    <div id="grid-tech" class="grid md:grid-cols-2 lg:grid-cols-4 gap-4 hidden">
+        <div onclick="setTechAgent('caio')" class="p-4 bg-white/10 rounded-xl hover:bg-white/20 cursor-pointer space-y-2 border border-white/10">
+            <span class="text-[10px] font-bold text-[#ECC19C] uppercase">CAIO AGENT</span>
+            <h5 class="font-bold text-sm">Enterprise AI Vision</h5>
+            <p class="text-[11px] text-gray-300">Owns algorithmic value creation, model ROI, and cross-functional agent orchestration.</p>
+        </div>
+        <div onclick="setTechAgent('cto')" class="p-4 bg-white/10 rounded-xl hover:bg-white/20 cursor-pointer space-y-2 border border-white/10">
+            <span class="text-[10px] font-bold text-[#84A9AC] uppercase">CTO AGENT</span>
+            <h5 class="font-bold text-sm">Tech Stack & Scale</h5>
+            <p class="text-[11px] text-gray-300">Manages cloud infrastructure, compute allocation, and real-time MLOps pipelines.</p>
+        </div>
+        <div onclick="setTechAgent('cio')" class="p-4 bg-white/10 rounded-xl hover:bg-white/20 cursor-pointer space-y-2 border border-white/10">
+            <span class="text-[10px] font-bold text-[#ECC19C] uppercase">CIO AGENT</span>
+            <h5 class="font-bold text-sm">Data Architecture</h5>
+            <p class="text-[11px] text-gray-300">Controls data sovereignty, ERP pipeline integration, and core system health.</p>
+        </div>
+        <div onclick="setTechAgent('cdo')" class="p-4 bg-white/10 rounded-xl hover:bg-white/20 cursor-pointer space-y-2 border border-white/10">
+            <span class="text-[10px] font-bold text-[#84A9AC] uppercase">CDO AGENT</span>
+            <h5 class="font-bold text-sm">Data Governance</h5>
+            <p class="text-[11px] text-gray-300">Oversees synthetic data, supplier knowledge bases, and data compliance.</p>
+        </div>
+        <div onclick="setTechAgent('creo')" class="p-4 bg-white/10 rounded-xl hover:bg-white/20 cursor-pointer space-y-2 border border-white/10">
+            <span class="text-[10px] font-bold text-amber-400 uppercase">CREO AGENT</span>
+            <h5 class="font-bold text-sm">Safety & Ethics</h5>
+            <p class="text-[11px] text-gray-300">Audits model drift, bias mitigation, and compliance with NIST/EU AI frameworks.</p>
+        </div>
+        <div onclick="setTechAgent('ciso')" class="p-4 bg-white/10 rounded-xl hover:bg-white/20 cursor-pointer space-y-2 border border-white/10">
+            <span class="text-[10px] font-bold text-rose-400 uppercase">CISO AGENT</span>
+            <h5 class="font-bold text-sm">Threat & Security</h5>
+            <p class="text-[11px] text-gray-300">Defends against prompt injection, model inversion, and data exfiltration.</p>
+        </div>
+        <div onclick="setTechAgent('cpdo')" class="p-4 bg-white/10 rounded-xl hover:bg-white/20 cursor-pointer space-y-2 border border-white/10 lg:col-span-2">
+            <span class="text-[10px] font-bold text-[#ECC19C] uppercase">CPO / CDO AGENT</span>
+            <h5 class="font-bold text-sm">AI-Driven Experience</h5>
+            <p class="text-[11px] text-gray-300">Translates AI output into agentic executive workflows and product differentiation.</p>
+        </div>
+    </div>
+
+    <!-- Live Agent Output Console -->
+    <div id="agentDetail" class="p-6 bg-white/10 rounded-2xl border border-white/10 text-sm text-gray-200">
+        <strong>Selected Perspective (CFO):</strong> Prioritizing short-term EBITDA protection while utilizing safety stock buffers to prevent price sensitivity churn.
+    </div>
+</section>
+
+<!-- Toggle Script -->
 <script>
-    function scrollToSection(id) {
-        document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
-    }
+    function switchWorkforce(view) {
+        const gridOps = document.getElementById('grid-ops');
+        const gridTech = document.getElementById('grid-tech');
+        const tabOps = document.getElementById('tab-ops');
+        const tabTech = document.getElementById('tab-tech');
 
-    // Chart.js Setup
-    const ctx = document.getElementById('simChart').getContext('2d');
-    const simChart = new Chart(ctx, {
-        type: 'line',
-        data: {
-            labels: ['Week 1', 'Week 4', 'Week 8', 'Week 12'],
-            datasets: [
-                {
-                    label: 'Base Case Revenue',
-                    data: [100, 102, 105, 108],
-                    borderColor: '#84A9AC',
-                    tension: 0.3
-                },
-                {
-                    label: 'Simulated Trade Shock Margin',
-                    data: [100, 92, 84, 78],
-                    borderColor: '#2D4059',
-                    backgroundColor: 'rgba(45, 64, 89, 0.1)',
-                    fill: true,
-                    tension: 0.3
-                }
-            ]
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            plugins: { legend: { position: 'top' } }
-        }
-    });
-
-    function runSimulation() {
-        const tariff = document.getElementById('simTariff').value;
-        document.getElementById('tariffVal').innerText = tariff + '%';
-
-        const marginImpact = (-0.28 * tariff).toFixed(1);
-        const riskIndex = (4 + (tariff * 0.05)).toFixed(1);
-        const resilience = Math.max(20, (100 - (tariff * 0.6))).toFixed(0);
-
-        document.getElementById('metricMargin').innerText = marginImpact + '%';
-        document.getElementById('metricRisk').innerText = riskIndex + ' / 10';
-        document.getElementById('metricResilience').innerText = resilience + ' / 100';
-
-        // Update chart simulation values dynamically
-        simChart.data.datasets[1].data = [
-            100, 
-            (100 - (tariff * 0.15)).toFixed(0), 
-            (100 - (tariff * 0.32)).toFixed(0), 
-            (100 - (tariff * 0.44)).toFixed(0)
-        ];
-        simChart.update();
-    }
-
-    function setAgent(role) {
-        ['cfo', 'coo', 'cpo'].forEach(r => {
-            const el = document.getElementById('agent-' + r);
-            el.className = "agent-card p-6 bg-white/10 rounded-2xl text-white space-y-3";
-        });
-        const active = document.getElementById('agent-' + role);
-        active.className = "agent-card active p-6 rounded-2xl text-[#2D4059] space-y-3";
-
-        const detail = document.getElementById('agentDetail');
-        if (role === 'cfo') {
-            detail.innerHTML = "<strong>Selected Perspective (CFO):</strong> Prioritizing short-term EBITDA protection while utilizing safety stock buffers to prevent price sensitivity churn.";
-        } else if (role === 'coo') {
-            detail.innerHTML = "<strong>Selected Perspective (COO):</strong> Focusing on operational throughput, rerouting logistics corridors, and maintaining plant capacity utilization.";
+        if(view === 'ops') {
+            gridOps.classList.remove('hidden');
+            gridTech.classList.add('hidden');
+            tabOps.className = "px-4 py-2 rounded-full bg-[#ECC19C] text-[#2D4059]";
+            tabTech.className = "px-4 py-2 rounded-full text-white hover:bg-white/10";
         } else {
-            detail.innerHTML = "<strong>Selected Perspective (CPO):</strong> Re-evaluating supplier contract MSAs, managing PO deviations, and shifting toward dual-sourcing nearshoring hubs.";
+            gridOps.classList.add('hidden');
+            gridTech.classList.remove('hidden');
+            tabTech.className = "px-4 py-2 rounded-full bg-[#ECC19C] text-[#2D4059]";
+            tabOps.className = "px-4 py-2 rounded-full text-white hover:bg-white/10";
         }
     }
 
-    runSimulation();
+    function setTechAgent(role) {
+        const detail = document.getElementById('agentDetail');
+        const map = {
+            caio: "<strong>CAIO Agent Output:</strong> Orchestrating cross-agent reasoning loop. Measuring simulation ROI and algorithmic confidence scores.",
+            cto: "<strong>CTO Agent Output:</strong> Allocating cloud compute instances for system dynamic simulations; zero MLOps pipeline latency detected.",
+            cio: "<strong>CIO Agent Output:</strong> Validating ERP pipeline data hygiene (SAP/Blue Yonder) and enforcing data sovereignty across national hubs.",
+            cdo: "<strong>CDO Agent Output:</strong> Synthesizing alternative supplier datasets to train trade disruption predictive models.",
+            creo: "<strong>CREO Agent Output:</strong> Auditing model decisions for bias; confirming compliance with global regulatory AI standards.",
+            ciso: "<strong>CISO Agent Output:</strong> Active threat defense engaged. Zero prompt injection attempts or data leaks detected in boardroom session.",
+            cpdo: "<strong>CPO/CDO Agent Output:</strong> Rendering real-time simulation output into interactive executive UI controls."
+        };
+        detail.innerHTML = map[role] || "";
+    }
 </script>
-</body>
-</html>
