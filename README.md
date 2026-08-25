@@ -1,4 +1,4 @@
-# 🏛️ VALUE™ Strategic Resilience Simulator (VSRS)
+# VALUE™ Strategic Resilience Simulator (VSRS)
 > **"Turning global uncertainty into executive clarity."**
 
 Welcome to the official repository for the **VALUE™ Strategic Resilience Simulator (VSRS)**—an AI-powered digital boardroom and trade shock engine designed to help executive teams simulate, evaluate, and navigate macroeconomic disruptions before committing capital.
@@ -18,7 +18,7 @@ VSRS bridges the gap between macroeconomic events (trade wars, port closures, su
 
 ---
 
-## 🏛️ Core Features & Framework Architecture
+## Core Features & Framework Architecture
 
 ### 1. Macroeconomic Trade Shock Engine
 Simulate cross-border tariff shocks (e.g., US ↔ Canada, US ↔ China) across custom time horizons (30 days, 90 days, 1 year) to observe second- and third-order financial and operational cascades:
@@ -57,8 +57,6 @@ Each simulation evaluates enterprise stability across seven strategic vectors:
 
 ## Repository File Structure
 
-```text
 ├── index.html           # Interactive VSRS Digital Boardroom & Workforce Console
 ├── report.html          # Standalone Executive Architecture White Paper
-└── README.md            # Repository overview & deployment documentationve Architecture White Paper
 └── README.md            # Repository overview & deployment documentation
